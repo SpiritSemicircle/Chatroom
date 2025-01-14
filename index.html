@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Auto-Refresh Embed</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iframe Refresh</title>
+  <script type="text/javascript">
+    // Function to refresh iframe by resetting its src
+    setInterval(function() {
+      var iframe = document.getElementById('pageswitcher-content');
+      if (iframe) iframe.src = iframe.src;  // Refresh iframe
+    }, 5000);  // Refresh every 5 seconds
+  </script>
 </head>
 <body>
-  <iframe id="site" src="https://docs.google.com/spreadsheets/d/1HjykLeeLumeibGlwzEZFCSB0FfZv-ULKGnf_PQDSqMk/edit?usp=sharing" style="width:100%; height:100vh; border:none;"></iframe>
-  <script>
-    setInterval(() => {
-      const iframe = document.getElementById('site');
-      iframe.src = 'https://docs.google.com/spreadsheets/d/1HjykLeeLumeibGlwzEZFCSB0FfZv-ULKGnf_PQDSqMk/edit?usp=sharing?timestamp=' + new Date().getTime();
-    }, 15000);
-  </script>
+  <iframe id="pageswitcher-content" src="https://docs.google.com/spreadsheets/u/0/d/1HjykLeeLumeibGlwzEZFCSB0FfZv-ULKGnf_PQDSqMk/htmlembed/sheet?headers=false&gid=1177269281" width="600" height="400"></iframe>
 </body>
 </html>
