@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iframe Refresh</title>
+  <script type="text/javascript">
+    // Function to refresh iframe by resetting its src
+    setInterval(function() {
+      var iframe = document.getElementById('weatherwidget-io-0');
+      if (iframe) iframe.src = iframe.src;  // Refresh iframe
+    }, 5000);  // Refresh every 5 seconds
+  </script>
+</head>
+<body>
+  <iframe id="weatherwidget-io-0" src="https://your-iframe-source-url.com" width="600" height="400"></iframe>
+</body>
+</html>
